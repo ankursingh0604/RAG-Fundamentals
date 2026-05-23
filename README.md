@@ -1,24 +1,24 @@
-# RAG-Fundamentals
-A hands-on implementation of RAG (Retrieval Augmented Generation) using Weaviate vector database, built while learning from scratch.
+# RAG Fundamentals
+
+A hands-on implementation of core RAG (Retrieval Augmented Generation) concepts built from scratch.
 
 ## What's in this repo
 
-- **Weaviate Vector DB pipeline** — chunking text, indexing into Weaviate, and performing semantic search
+- **bm25.py** — BM25 keyword-based retrieval
+- **rrf.py** — Reciprocal Rank Fusion combining multiple retrievers
+- **semanticretriever.py** — Semantic search using sentence transformers
+- **weaviate_vector_db.py** — Full RAG pipeline with Weaviate vector database
 
 ## Tech Stack
 - Python
 - Weaviate
-- Sentence Transformers (all-MiniLM-L6-v2)
+- Sentence Transformers
+- rank-bm25
 
 ## Concepts Covered
-- Text chunking with overlap (sliding window)
-- Converting text to vector embeddings
-- Indexing documents into a vector database
-- Semantic search using cosine similarity
-- HNSW indexing
-
-## How to Run
-```bash
-pip install weaviate-client sentence-transformers
-python weaviate_rag.py
-```
+- BM25 keyword search
+- Semantic search using embeddings
+- Reciprocal Rank Fusion (RRF)
+- Hybrid search (BM25 + Semantic)
+- Text chunking with overlap
+- Vector database indexing and querying
